@@ -28,7 +28,7 @@ if quantidadeFrutas > 8 or precoTotal > 25:
     print(f"Preço Maçãs: {precoMacas}")
     print(f"Preço Total: {precoTotal}")
     print(f"Quantidade de Frutas: {quantidadeFrutas}")
-    print(f"Valor desconto: {desconto}")
+    print(f"Valor desconto: {desconto:.2f}")
     print(f"Valor pago: {valorPago}")
 else:
     valorPago = precoTotal
@@ -38,5 +38,4 @@ else:
     print(f"Preço Maçãs: {precoMacas}")
     print(f"Preço Total: {precoTotal}")
     print(f"Quantidade de Frutas: {quantidadeFrutas}")
-    print(f"Valor desconto: {desconto}")
     print(f"Valor pago: {valorPago}")
