@@ -4,7 +4,7 @@ def adicionar_item():
     fabricante = input("Digite o fabricante do item: ")
     preco = input("Digite o preço: ")
 
-    with open("estoque.txt","r") as arquivo:
+    with open("estoque.txt","a") as arquivo:
         arquivo.write(f"{codigo},{descricao},{fabricante},{preco}\n")
     print("Item adicionado com sucesso!")
 
