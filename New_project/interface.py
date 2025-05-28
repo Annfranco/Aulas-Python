@@ -1,6 +1,12 @@
 #interface usando gridLayout do Tkinter
 from tkinter import *
 import model
+from tkinter import messagebox
+
+def sair():
+    resposta = messagebox.askyesno("Sair", "Você realmente deseja sair?")
+    if resposta:
+        menu_inicial.destroy()
 
 def guardar_usuario():
     usuario = txtUsuario.get()
@@ -33,7 +39,7 @@ btEntrar = Button(menu_inicial, text = "Entrar", width=10, font="Arial 12 bold",
 btEntrar.grid(row=2, column=1, pady=20, sticky=W)
 
 btCancelar = Button(menu_inicial, text = "Cancelar", width=10, font="Arial 12 bold", 
-                    bg="#FF0000", fg="#FFFFFF")
+                    bg="#FF0000", fg="#FFFFFF", command=sair)
 btCancelar.grid(row=2, column=1, pady=10, sticky=E)
 
 menu_inicial.mainloop()
